@@ -7,3 +7,5 @@ Quick start:
     sudo apt-get install python3-tk
  - cd Installer_tool
  - sudo python3 JN_INSTALLER.py
+
+![Alt text](https://github.com/jokerpoe/JetsonNano_LIBInstaller/blob/master/JNLI-tk.png "Optional title")
