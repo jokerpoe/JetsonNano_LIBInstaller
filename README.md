@@ -2,7 +2,7 @@
 
 NOTE:
 - To install some libraries and tool for jetson nano
-- ALL LIBRARY AND TOOL COLLECT FROM INTERNET
+- LIBRARY AND TOOL COLLECT FROM INTERNET
 - ONLY tested on jetson nano
 - ONLY tested on Jetpack 4.4/
 
