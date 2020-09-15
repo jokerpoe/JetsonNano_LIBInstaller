@@ -2,7 +2,7 @@
 - To install some libraries and tool for jetson nano
 - ALL LIBRARY AND TOOL COLLECT FROM INTERNET
 
-Quick start:
+Quick install:
 - Install TKINTER on jetson nano by:
     sudo apt-get install python3-tk
  - cd Installer_tool
