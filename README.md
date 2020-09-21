@@ -7,6 +7,7 @@ NOTE:
 - ONLY tested on Jetpack 4.4
 
 Quick install:
+ - git clone https://github.com/jokerpoe/JetsonNano_LIBInstaller
  - cd JetsonNano_LIBInstaller
  - sudo python3 JN_INSTALLER.py
 
