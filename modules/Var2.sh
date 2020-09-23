@@ -2,6 +2,7 @@
 
 echo '[7] Install DLIB and face_regconition'
 sudo apt-get install -y python3-matplotlib
+pi3p install --upgrade numpy scipy
 pip3 install --upgrade launchpadlib
 pip3 install --upgrade setuptools
 sudo pip3 install -U setuptools
