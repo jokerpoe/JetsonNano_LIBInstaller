@@ -14,3 +14,4 @@ sudo apt-get install -y cython3
 sudo apt-get install -y libxml2-dev libxslt1-dev
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
+pip3 install --upgrade protobuf
