@@ -12,3 +12,8 @@ Quick install:
  - sudo python3 JN_INSTALLER.py
 
 ![Alt text](https://github.com/jokerpoe/JetsonNano_LIBInstaller/blob/master/JNLI-tk.png "Optional title")
+
+
+-------------------------------------------------------------------------------
+INFROMATION:
+- OPENCV VER 4.5.0 with CUDA and cudnn
