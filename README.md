@@ -1,12 +1,12 @@
 # JetsonNano_LIBInstaller
 
-**NOTE:**
+# **NOTE:**
 - To install some libraries and tools for jetson nano
 - LIBRARY AND TOOL COLLECT FROM INTERNET
 - ONLY tested on Jetson Nano (maybe work for xavier and other jetson platform)
 - ONLY tested on Jetpack 4.4
 
-**Quick install:**
+# **Quick install:**
  - git clone https://github.com/jokerpoe/JetsonNano_LIBInstaller
  - cd JetsonNano_LIBInstaller
  - sudo python3 JN_INSTALLER.py
@@ -15,4 +15,4 @@
 
 
 -------------------------------------------------------------------------------
-**INFROMATION:** ALL packages will update to newest version from source
+# **INFROMATION:** ALL packages will update to newest version from source
