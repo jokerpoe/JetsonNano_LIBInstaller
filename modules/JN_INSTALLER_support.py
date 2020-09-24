@@ -40,6 +40,10 @@ def set_Tk_var():
 	Var4 = tk.IntVar()
 	global Var5
 	Var5 = tk.IntVar()
+	global Var8
+	Var8 = tk.IntVar()
+	global Var9
+	Var9 = tk.IntVar()
 
 def init(top, gui, *args, **kwargs):
 	global w, top_level, root
@@ -68,6 +72,8 @@ def Prrocess_to_install():
 	Var5: VSCODE
 	Var6: UPDATE CMAKE
 	Var7: WXPYTHON
+	Var8: Nomachine
+	Var9: Delete after completing
 	'''
 	start_time = dt.datetime.now()																																																																																																																							
 	path = os.getcwd()
@@ -97,6 +103,14 @@ def Prrocess_to_install():
 	if Var3.get():
 		os.system('chmod +x Var3.sh')
 		os.system('./Var3.sh')
+	if Var8.get():
+		os.system('chmod +x Var8.sh')
+		os.system('./Var8.sh')
+	if Var9.get():
+		os.system('sudo rm -rf opencv opencv_contrib')
+		os.system('sudo rm -rf installSwapfile installVSCode get-pip.py')
+		os.system('sudo rm -rf nomachine_6.11.2_1_arm64.deb')
+		os.system('sudo apt -y autoremove')
 	complete_time = dt.datetime.now() - start_time
 	os.chdir(path)
 	print( '------------------------------------')
