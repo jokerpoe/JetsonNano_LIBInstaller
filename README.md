@@ -15,5 +15,4 @@ Quick install:
 
 
 -------------------------------------------------------------------------------
-INFROMATION:
-- OPENCV VER 4.5.0 with CUDA and cudnn
+INFROMATION: ALL packages will update to newest version from source
