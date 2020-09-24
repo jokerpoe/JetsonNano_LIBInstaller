@@ -32,16 +32,15 @@ sudo cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D ENABLE_FAST_MATH=1 \
 -D CUDA_FAST_MATH=1 \
 -D CUDA_ARCH_BIN=5.3,6.0,6.1,7.0,7.5 \
--D CUDA_ARCH_PTX=7.5
 -D WITH_CUBLAS=1 \
 -D OPENCV_EXTRA_MODULES_PATH=/home/$USER/opencv_contrib/modules \
 -D HAVE_opencv_python3=ON \
 -D WITH_LIBV4L=ON \
 -D WITH_GTK=ON \
--D PYTHON_EXECUTABLE=~/.virtualenvs/opencv_cuda/bin/python \
 -D BUILD_EXAMPLES=ON ..
 
-#sudo make -j4
-#sudo make install
-#cd ..
-#cd ..
+sudo make -j4
+sudo make install
+sudo ldconfig
+cd ..
+cd ..

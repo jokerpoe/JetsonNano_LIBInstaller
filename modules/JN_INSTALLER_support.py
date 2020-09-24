@@ -111,6 +111,7 @@ def Prrocess_to_install():
 		os.system('sudo rm -rf installSwapfile installVSCode get-pip.py')
 		os.system('sudo rm -rf nomachine_6.11.2_1_arm64.deb')
 		os.system('sudo apt -y autoremove')
+        os.system('sudo rm -rf /home/$USER/opencv_contrib')
 	complete_time = dt.datetime.now() - start_time
 	os.chdir(path)
 	print( '------------------------------------')
