@@ -107,17 +107,42 @@ def Prrocess_to_install():
 		os.system('chmod +x Var8.sh')
 		os.system('./Var8.sh')
 	if Var9.get():
-		os.system('sudo rm -rf opencv opencv_contrib')
+		os.system('sudo rm -rf opencv')
+		os.system('sudo rm -rf /home/$USER/opencv_contrib')
 		os.system('sudo rm -rf installSwapfile installVSCode get-pip.py')
 		os.system('sudo rm -rf nomachine_6.11.2_1_arm64.deb')
 		os.system('sudo apt -y autoremove')
-        os.system('sudo rm -rf /home/$USER/opencv_contrib')
 	complete_time = dt.datetime.now() - start_time
 	os.chdir(path)
 	print( '------------------------------------')
 	print('Compeled in: ', complete_time)
-		
+	print("List of libraries installed: ", end ='')
+	Check_all_lib()
 
+def Check_library_install(Libname):
+	lib_name = "/" + str(Libname) + "/"
+	lib_path = "/usr/local/lib/python3.6/dist-packages" + lib_name + "/__init__.py"
+	return os.path.isfile(lib_path)
+
+def Check_all_lib():
+
+	list_lib_2check = ["wx","dlib", "face_regcognition", "jtop", "pip", "cv2"]
+	for item in list_lib_2check:
+		result = Check_library_install(item)
+		if result:
+			print(item, end = ' ')
+	if Check_VSCODE_install:
+		print("Visual_Studio_code")
+	if Check_Nomachine_install:
+		print("NoMachine")
+
+def Check_VSCODE_install():
+	path_vsc_check = "/usr/share/code-oss/bin/code-oss/"
+	return os.path.isfile(path_vsc_check)
+
+def Check_Nomachine_install():
+	path_vsc_check = "/usr/share/applications/NoMachine"
+	return os.path.isfile(path_vsc_check)
 
 def destroy_window():
 	# Function which closes the window.
@@ -128,7 +153,6 @@ def destroy_window():
 if __name__ == '__main__':
 	import JN_INSTALLER
 	JN_INSTALLER.vp_start_gui()
-
 
 
 
