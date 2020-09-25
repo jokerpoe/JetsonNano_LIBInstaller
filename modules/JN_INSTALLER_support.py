@@ -8,6 +8,8 @@
 import sys
 import os
 import datetime as dt
+import re
+
 try:
 	import Tkinter as tk
 except ImportError:
@@ -19,6 +21,7 @@ try:
 except ImportError:
 	import tkinter.ttk as ttk
 	py3 = True
+
 
 def set_Tk_var():
 	global Var3
@@ -52,10 +55,10 @@ def init(top, gui, *args, **kwargs):
 	root = top
 
 def install_now_but():
+	os.system('clear')
 	print( '------------------------------------')
-	print( 'ASTI R&D COOP')
-	print( 'PHAM HONG SON')
-	print( 'Build 15SEP2020')
+	print( 'jokerpoe@SON')
+	print( 'Build 25SEP2020')
 	print( '[WARN] Should not use SD CARD 32GB')
 	print( '------------------------------------')
 	Prrocess_to_install()
@@ -75,6 +78,7 @@ def Prrocess_to_install():
 	Var8: Nomachine
 	Var9: Delete after completing
 	'''
+
 	start_time = dt.datetime.now()																																																																																																																							
 	path = os.getcwd()
 	print(os.path.join(path, 'modules'))
@@ -116,8 +120,10 @@ def Prrocess_to_install():
 	os.chdir(path)
 	print( '------------------------------------')
 	print('Compeled in: ', complete_time)
-	print("List of libraries installed: ", end ='')
+	print( '------------------------------------')
+	print("INSTALLED: ", end ='')
 	Check_all_lib()
+	Check_with_CUDA()
 
 def Check_library_install(Libname):
 	lib_name = "/" + str(Libname) + "/"
@@ -132,9 +138,20 @@ def Check_all_lib():
 		if result:
 			print(item, end = ' ')
 	if Check_VSCODE_install:
-		print("Visual_Studio_code")
+		print("Visual_Studio_code", end = ' ')
 	if Check_Nomachine_install:
-		print("NoMachine")
+		print("NoMachine", end = ' ')
+
+def Check_with_CUDA():
+	print("\nCOMPLIE GPU INFORMATION:")
+	import cv2
+	cv_info = [re.sub('\s+', ' ', ci.strip()) for ci in cv2.getBuildInformation().strip().split('\n') 
+               if len(ci) > 0 and re.search(r'(nvidia*:?)|(cuda*:)|(cudnn*:)', ci.lower()) is not None]
+	cv_info = "\tOPENCV USING CUDA: " + str(cv_info)
+	print(cv_info)
+	import dlib
+	dlib_info = "\tDLIB USING CUDA: " + str(dlib.DLIB_USE_CUDA)
+	print(dlib_info)
 
 def Check_VSCODE_install():
 	path_vsc_check = "/usr/share/code-oss/bin/code-oss/"
@@ -153,6 +170,8 @@ def destroy_window():
 if __name__ == '__main__':
 	import JN_INSTALLER
 	JN_INSTALLER.vp_start_gui()
+
+	
 
 
 
