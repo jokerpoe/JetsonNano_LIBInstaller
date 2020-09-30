@@ -6,6 +6,11 @@
 #    Sep 24, 2020 10:22:01 AM +07  platform: Windows NT
 
 import sys
+import os
+try:
+    import Tkinter as tk
+except ImportError:
+    os.system('echo asti | sudo -S apt-get install -y python3-tk')
 
 try:
     import Tkinter as tk
