@@ -10,7 +10,7 @@ import os
 try:
     import Tkinter as tk
 except ImportError:
-    os.system('echo asti | sudo -S apt-get install -y python3-tk')
+    os.system('sudo apt-get install -y python3-tk')
 
 try:
     import Tkinter as tk
