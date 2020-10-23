@@ -153,7 +153,7 @@ def Check_with_CUDA():
 		import dlib
 		dlib_info = "\tDLIB USING CUDA: " + str(dlib.DLIB_USE_CUDA)
 	except:
-		dlib_info = "None"
+		dlib_info =  "\tDLIB USING CUDA: NONE"
 	print(dlib_info)
 
 def Check_VSCODE_install():
