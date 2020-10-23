@@ -149,8 +149,11 @@ def Check_with_CUDA():
                if len(ci) > 0 and re.search(r'(nvidia*:?)|(cuda*:)|(cudnn*:)', ci.lower()) is not None]
 	cv_info = "\tOPENCV USING CUDA: " + str(cv_info)
 	print(cv_info)
-	import dlib
-	dlib_info = "\tDLIB USING CUDA: " + str(dlib.DLIB_USE_CUDA)
+	try:
+		import dlib
+		dlib_info = "\tDLIB USING CUDA: " + str(dlib.DLIB_USE_CUDA)
+	except:
+		dlib_info = "None"
 	print(dlib_info)
 
 def Check_VSCODE_install():
