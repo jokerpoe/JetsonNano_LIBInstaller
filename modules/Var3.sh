@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '[6] Re-Complie OPENCV'
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get install -y build-essential cmake unzip pkg-config
 sudo apt-get install -y libjpeg-dev libpng-dev libtiff-dev
@@ -11,9 +11,9 @@ sudo apt-get install -y libgtk-3-dev
 sudo apt-get install -y libatlas-base-dev gfortran
 sudo apt-get install -y python3-dev
 sudo pip3 install --upgrade numpy
-git clone https://github.com/opencv/opencv
+git clone https://github.com/opencv/opencv --depth 1
 
-git clone https://github.com/opencv/opencv_contrib /home/$USER/opencv_contrib/
+git clone https://github.com/opencv/opencv_contrib /home/$USER/opencv_contrib/ --depth 1
 
 cd opencv
 mkdir build
