@@ -3,8 +3,6 @@
 # **NOTE:**
 - To install some libraries and tools for jetson nano
 - LIBRARY AND TOOL COLLECT FROM INTERNET
-- ONLY tested on Jetson Nano (maybe work for xavier and other jetson platform)
-- ONLY tested on Jetpack 4.4
 
 # **Quick install:**
  - git clone https://github.com/jokerpoe/JetsonNano_LIBInstaller
